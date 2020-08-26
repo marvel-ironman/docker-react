@@ -6,4 +6,4 @@ before_install:
  - docker build -t marveltsev/docker-react -f Dockerfile.dev .
 
 script:
- - docker run marveltsev/docker-react npm run test -- --coverage
+ - docker run -e CI=true marveltsev/docker-react npm run test
